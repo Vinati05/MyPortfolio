@@ -48,7 +48,7 @@ export function ExperienceSection() {
           <h2 className="text-4xl font-bold text-vibrant-teal mb-4" data-testid="experience-title">
             Experience
           </h2>
-          <p className="text-xl text-dark-gray-text">
+          <p className="text-xl text-soft-cream-text">
             Professional journey and learning milestones
           </p>
         </div>
