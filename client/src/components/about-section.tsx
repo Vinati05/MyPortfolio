@@ -15,13 +15,13 @@ export function AboutSection() {
   return (
     <section 
       id="about" 
-      className="py-20 navy-ombre-bg"
+      className="py-20 navy-gradient-bg"
       data-testid="about-section"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
-            <h2 className="text-4xl font-bold text-electric-teal" data-testid="about-title">
+            <h2 className="text-4xl font-bold text-crisp-white" data-testid="about-title">
               About Me
             </h2>
             <div className="text-lg text-soft-cream-text space-y-4" data-testid="about-description">
@@ -44,7 +44,7 @@ export function AboutSection() {
           <div className="space-y-8">
             {/* Professional workspace image placeholder */}
             <div className="relative">
-              <div className="w-full h-64 bg-gradient-to-br from-purple-900 to-indigo-900 rounded-xl shadow-2xl flex items-center justify-center border border-midnight-purple">
+              <div className="w-full h-64 bg-gradient-to-br from-indigo-900 to-purple-900 rounded-xl shadow-vibrant-lg flex items-center justify-center border border-subtle">
                 <div className="text-center text-electric-teal">
                   <div className="text-6xl mb-4">💻</div>
                   <p className="text-sm opacity-75">Professional Developer Workspace</p>
@@ -54,8 +54,8 @@ export function AboutSection() {
             </div>
             
             {/* Skills Cloud */}
-            <div className="bg-midnight-purple p-6 rounded-xl border border-electric-teal/20 shadow-2xl" data-testid="skills-section">
-              <h3 className="text-xl font-semibold mb-4 text-electric-teal">Core Skills</h3>
+            <div className="bg-card-navy p-6 rounded-xl border border-subtle shadow-vibrant-lg" data-testid="skills-section">
+              <h3 className="text-xl font-semibold mb-4 text-crisp-white">Core Skills</h3>
               <div className="flex flex-wrap gap-3">
                 {skills.map((skill, index) => (
                   <Badge

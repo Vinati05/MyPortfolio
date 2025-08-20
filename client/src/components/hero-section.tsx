@@ -33,7 +33,7 @@ export function HeroSection() {
   return (
     <section 
       id="hero" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden navy-ombre-bg"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden navy-gradient-bg"
       data-testid="hero-section"
     >
       {/* Floating Elements */}
@@ -61,7 +61,7 @@ export function HeroSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
         <div className="space-y-8">
-          <h1 className="text-5xl md:text-7xl font-bold text-electric-teal animate-glow" data-testid="hero-title">
+          <h1 className="text-5xl md:text-7xl font-bold text-crisp-white animate-glow" data-testid="hero-title">
             Vinati Vege
           </h1>
           
@@ -77,7 +77,7 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               onClick={() => scrollToSection('projects')}
-              className="bg-coral-accent hover:bg-red-500 px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 text-deep-navy-bg shadow-2xl"
+              className="bg-coral-accent hover:bg-red-500 px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 text-crisp-white shadow-vibrant-lg"
               data-testid="button-explore-work"
             >
               Explore My Work
@@ -85,7 +85,7 @@ export function HeroSection() {
             <Button
               onClick={() => window.open('https://github.com/vinativege', '_blank')}
               variant="outline"
-              className="border-2 border-electric-teal text-electric-teal hover:bg-electric-teal hover:text-deep-navy-bg px-8 py-4 rounded-lg font-semibold transition-all bg-transparent shadow-2xl"
+              className="border-2 border-electric-teal text-electric-teal hover:bg-electric-teal hover:text-crisp-white px-8 py-4 rounded-lg font-semibold transition-all bg-transparent shadow-vibrant-lg"
               data-testid="button-view-github"
             >
               View GitHub

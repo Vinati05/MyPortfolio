@@ -8,9 +8,10 @@ export default {
       colors: {
         "deep-navy-bg": "var(--deep-navy-bg)",
         "soft-cream-text": "var(--soft-cream-text)",
+        "crisp-white": "var(--crisp-white)",
         "electric-teal": "var(--electric-teal)",
         "coral-accent": "var(--coral-accent)",
-        "midnight-purple": "var(--midnight-purple)",
+        "card-navy": "var(--card-navy)",
         background: "var(--background)",
         foreground: "var(--foreground)",
         card: {

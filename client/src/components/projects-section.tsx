@@ -130,12 +130,12 @@ export function ProjectsSection() {
     <>
       <section 
         id="projects" 
-        className="py-20 bg-midnight-purple shadow-2xl"
+        className="py-20 bg-card-navy shadow-vibrant-lg"
         data-testid="projects-section"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-electric-teal mb-4" data-testid="projects-title">
+            <h2 className="text-4xl font-bold text-crisp-white mb-4" data-testid="projects-title">
               Featured Projects
             </h2>
             <p className="text-xl text-soft-cream-text">
@@ -147,13 +147,13 @@ export function ProjectsSection() {
             {projects.map((project) => (
               <Card
                 key={project.id}
-                className="project-card p-6 rounded-xl cursor-pointer bg-deep-navy-bg border border-electric-teal/30 hover:shadow-2xl hover:border-coral-accent/70 transition-all"
+                className="project-card p-6 rounded-xl cursor-pointer bg-deep-navy-bg border border-subtle hover:shadow-vibrant-lg hover:border-electric-teal/50 transition-all shadow-vibrant"
                 onClick={() => setSelectedProject(project)}
                 data-testid={`project-card-${project.id}`}
               >
                 <CardContent className="p-0">
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-semibold text-soft-cream-text">
+                    <h3 className="text-xl font-semibold text-crisp-white">
                       {project.title}
                     </h3>
                     {getIcon(project.icon)}
@@ -168,7 +168,7 @@ export function ProjectsSection() {
                       <Badge
                         key={tech}
                         variant="outline"
-                        className="bg-electric-teal/10 border-electric-teal/30 text-electric-teal text-xs px-3 py-1"
+                        className="bg-electric-teal/20 border-electric-teal text-electric-teal text-xs px-3 py-1"
                       >
                         {tech}
                       </Badge>
