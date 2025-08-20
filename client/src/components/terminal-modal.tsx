@@ -22,7 +22,7 @@ export function TerminalModal({ isOpen, onClose }: TerminalModalProps) {
     projects    - List all projects
     skills      - Show technical skills
     experience  - Display work experience
-    contact     - Get contact information
+    github      - Open GitHub profile
     resume      - Download resume
     clear       - Clear terminal
     exit        - Close terminal`,
@@ -51,10 +51,8 @@ export function TerminalModal({ isOpen, onClose }: TerminalModalProps) {
     - Backend API implementation
     - Scalable solution deployment`,
     
-    contact: () => `Contact Information:
-    Email: vinati.vege@example.com
-    LinkedIn: /in/vinativege
-    GitHub: /vinativege`,
+    github: () => `Opening GitHub profile...
+    https://github.com/vinativege`,
     
     resume: () => `Resume download initiated...
     [This would trigger a resume download in a real implementation]`,
@@ -97,6 +95,12 @@ export function TerminalModal({ isOpen, onClose }: TerminalModalProps) {
         return;
       } else {
         newHistory.push({ command: '', output: result });
+        // Handle special commands
+        if (command === 'github') {
+          setTimeout(() => {
+            window.open('https://github.com/vinativege', '_blank');
+          }, 1000);
+        }
       }
     } else {
       newHistory.push({ 

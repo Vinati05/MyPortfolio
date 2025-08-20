@@ -84,12 +84,12 @@ export function HeroSection() {
               Explore My Work
             </Button>
             <Button
-              onClick={() => scrollToSection('contact')}
+              onClick={() => window.open('https://github.com/vinativege', '_blank')}
               variant="outline"
               className="border-2 border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-white px-8 py-4 rounded-lg font-semibold transition-all"
-              data-testid="button-lets-build"
+              data-testid="button-view-github"
             >
-              Let's Build Together
+              View GitHub
             </Button>
           </div>
         </div>

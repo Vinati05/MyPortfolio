@@ -20,7 +20,6 @@ export default function Home() {
       <ProjectsSection />
       <ExperienceSection />
       <AchievementsSection />
-      <ContactSection />
       <Footer />
       <TerminalModal
         isOpen={isTerminalOpen}

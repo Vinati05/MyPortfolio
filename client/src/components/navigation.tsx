@@ -71,13 +71,6 @@ export function Navigation({ onTerminalToggle }: NavigationProps) {
             >
               Achievements
             </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="hover:text-electric-blue transition-colors"
-              data-testid="nav-contact"
-            >
-              Contact
-            </button>
           </div>
           
           <Button

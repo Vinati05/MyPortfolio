@@ -30,7 +30,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
           
           <div className="w-full h-64 bg-gradient-to-br from-dark-blue to-navy rounded-t-xl flex items-center justify-center border-b border-electric-blue/20">
             <div className="text-center text-electric-blue">
-              <div className="text-6xl mb-4">🚀</div>
+              <div className="text-6xl mb-4">💻</div>
               <p className="text-sm opacity-75">{project.title}</p>
             </div>
           </div>
