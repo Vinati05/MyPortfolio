@@ -135,7 +135,7 @@ export function ProjectsSection() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-crisp-white mb-4" data-testid="projects-title">
+            <h2 className="text-4xl font-bold text-vibrant-teal mb-4" data-testid="projects-title">
               Featured Projects
             </h2>
             <p className="text-xl text-soft-cream-text">

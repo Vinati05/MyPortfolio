@@ -10,6 +10,7 @@ export default {
         "soft-cream-text": "var(--soft-cream-text)",
         "crisp-white": "var(--crisp-white)",
         "electric-teal": "var(--electric-teal)",
+        "vibrant-teal": "var(--vibrant-teal)",
         "coral-accent": "var(--coral-accent)",
         "card-navy": "var(--card-navy)",
         background: "var(--background)",

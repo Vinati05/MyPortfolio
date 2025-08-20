@@ -27,6 +27,7 @@
   --soft-cream-text: #fef6e4;
   --crisp-white: #ffffff;
   --electric-teal: #00bfae;
+  --vibrant-teal: #00ffd5;
   --coral-accent: #ff6b6b;
   --card-navy: #24305c;
   --font-sans: 'Inter', sans-serif;
@@ -95,6 +96,10 @@
   
   .text-electric-teal {
     color: var(--electric-teal);
+  }
+  
+  .text-vibrant-teal {
+    color: var(--vibrant-teal);
   }
   
   .text-coral-accent {
