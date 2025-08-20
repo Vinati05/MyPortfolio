@@ -33,7 +33,7 @@ export function HeroSection() {
   return (
     <section 
       id="hero" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-off-white"
       data-testid="hero-section"
     >
       {/* Floating Elements */}
