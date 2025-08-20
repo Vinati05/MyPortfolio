@@ -28,14 +28,14 @@ export function Navigation({ onTerminalToggle }: NavigationProps) {
   return (
     <nav 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-light-card/95 backdrop-blur-md border-b border-gray-300 shadow-sm' : ''
+        isScrolled ? 'bg-dark-card/95 backdrop-blur-md border-b border-soft-silver shadow-sm' : ''
       }`}
       data-testid="navigation"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div 
-            className="text-xl font-bold text-royal-blue cursor-pointer"
+            className="text-xl font-bold text-deep-navy cursor-pointer"
             onClick={() => scrollToSection('hero')}
             data-testid="logo"
           >

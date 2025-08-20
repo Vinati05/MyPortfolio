@@ -4,30 +4,31 @@
 @tailwind utilities;
 
 :root {
-  --background: #e0e0e0;
-  --foreground: #2c2c2c;
-  --card: #f5f5f5;
-  --card-foreground: #2c2c2c;
-  --popover: #f5f5f5;
-  --popover-foreground: #2c2c2c;
+  --background: #1f1f1f;
+  --foreground: #e0e0e0;
+  --card: #2a2a2a;
+  --card-foreground: #e0e0e0;
+  --popover: #2a2a2a;
+  --popover-foreground: #e0e0e0;
   --primary: #1e3a8a;
-  --primary-foreground: #ffffff;
-  --secondary: #d0d0d0;
-  --secondary-foreground: #2c2c2c;
-  --muted: #c8c8c8;
-  --muted-foreground: #666666;
+  --primary-foreground: #e0e0e0;
+  --secondary: #333333;
+  --secondary-foreground: #e0e0e0;
+  --muted: #404040;
+  --muted-foreground: #a6a6a6;
   --accent: #20c997;
-  --accent-foreground: #ffffff;
+  --accent-foreground: #1f1f1f;
   --destructive: hsl(0, 84%, 60%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --border: #c0c0c0;
-  --input: #f0f0f0;
+  --border: #a6a6a6;
+  --input: #333333;
   --ring: #1e3a8a;
-  --muted-gray: #e0e0e0;
-  --charcoal-text: #2c2c2c;
-  --royal-blue: #1e3a8a;
+  --dark-gray: #1f1f1f;
+  --light-text: #e0e0e0;
+  --deep-navy: #1e3a8a;
   --muted-teal: #20c997;
-  --light-card: #f5f5f5;
+  --soft-silver: #a6a6a6;
+  --dark-card: #2a2a2a;
   --font-sans: 'Inter', sans-serif;
   --radius: 0.5rem;
 }
@@ -60,58 +61,62 @@
   }
   
   body {
-    @apply bg-muted-gray text-charcoal-text font-sans antialiased;
+    @apply bg-dark-gray text-light-text font-sans antialiased;
     font-family: 'Inter', sans-serif;
   }
 }
 
 @layer utilities {
-  .muted-gray {
-    background-color: var(--muted-gray);
+  .dark-gray {
+    background-color: var(--dark-gray);
   }
   
-  .light-card {
-    background-color: var(--light-card);
+  .dark-card {
+    background-color: var(--dark-card);
   }
   
-  .royal-blue {
-    background-color: var(--royal-blue);
+  .deep-navy {
+    background-color: var(--deep-navy);
   }
   
   .muted-teal {
     background-color: var(--muted-teal);
   }
   
-  .text-charcoal-text {
-    color: var(--charcoal-text);
+  .text-light-text {
+    color: var(--light-text);
   }
   
-  .text-royal-blue {
-    color: var(--royal-blue);
+  .text-deep-navy {
+    color: var(--deep-navy);
   }
   
   .text-muted-teal {
     color: var(--muted-teal);
   }
   
-  .bg-muted-gray {
-    background-color: var(--muted-gray);
+  .text-soft-silver {
+    color: var(--soft-silver);
   }
   
-  .bg-light-card {
-    background-color: var(--light-card);
+  .bg-dark-gray {
+    background-color: var(--dark-gray);
   }
   
-  .border-royal-blue {
-    border-color: var(--royal-blue);
+  .bg-dark-card {
+    background-color: var(--dark-card);
+  }
+  
+  .border-deep-navy {
+    border-color: var(--deep-navy);
   }
   
   .border-muted-teal {
     border-color: var(--muted-teal);
   }
   
-  .border-light {
-    border-color: var(--border);
+  .border-soft-silver {
+    border-color: var(--soft-silver);
   }
 }
 

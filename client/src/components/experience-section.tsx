@@ -40,22 +40,22 @@ export function ExperienceSection() {
   return (
     <section 
       id="experience" 
-      className="py-20 bg-muted-gray"
+      className="py-20 bg-dark-gray"
       data-testid="experience-section"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-royal-blue mb-4" data-testid="experience-title">
+          <h2 className="text-4xl font-bold text-deep-navy mb-4" data-testid="experience-title">
             Experience
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-soft-silver">
             Professional journey and learning milestones
           </p>
         </div>
         
         {/* Timeline */}
         <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-royal-blue/30"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-deep-navy/30"></div>
           
           {experiences.map((exp, index) => (
             <div key={exp.id} className="relative flex items-center mb-16">
