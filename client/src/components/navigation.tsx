@@ -28,7 +28,7 @@ export function Navigation({ onTerminalToggle }: NavigationProps) {
   return (
     <nav 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-dark-card/95 backdrop-blur-md border-b border-soft-silver shadow-sm' : ''
+        isScrolled ? 'bg-card-darker/95 backdrop-blur-md border-b border-gray-600 shadow-sm' : ''
       }`}
       data-testid="navigation"
     >
@@ -45,28 +45,28 @@ export function Navigation({ onTerminalToggle }: NavigationProps) {
           <div className="hidden md:flex space-x-8">
             <button 
               onClick={() => scrollToSection('about')}
-              className="hover:text-royal-blue transition-colors"
+              className="hover:text-muted-gold transition-colors"
               data-testid="nav-about"
             >
               About
             </button>
             <button 
               onClick={() => scrollToSection('projects')}
-              className="hover:text-royal-blue transition-colors"
+              className="hover:text-muted-gold transition-colors"
               data-testid="nav-projects"
             >
               Projects
             </button>
             <button 
               onClick={() => scrollToSection('experience')}
-              className="hover:text-royal-blue transition-colors"
+              className="hover:text-muted-gold transition-colors"
               data-testid="nav-experience"
             >
               Experience
             </button>
             <button 
               onClick={() => scrollToSection('achievements')}
-              className="hover:text-royal-blue transition-colors"
+              className="hover:text-muted-gold transition-colors"
               data-testid="nav-achievements"
             >
               Achievements
@@ -75,7 +75,7 @@ export function Navigation({ onTerminalToggle }: NavigationProps) {
           
           <Button
             onClick={onTerminalToggle}
-            className="bg-royal-blue hover:bg-blue-700 transition-colors"
+            className="bg-vibrant-teal hover:bg-muted-gold transition-colors text-soft-dark-gray"
             data-testid="button-terminal"
           >
             <Terminal className="w-4 h-4 mr-2" />

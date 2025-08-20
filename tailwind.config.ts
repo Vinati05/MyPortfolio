@@ -6,12 +6,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        "dark-gray": "var(--dark-gray)",
-        "light-text": "var(--light-text)",
+        "soft-dark-gray": "var(--soft-dark-gray)",
+        "light-gray-text": "var(--light-gray-text)",
         "deep-navy": "var(--deep-navy)",
-        "muted-teal": "var(--muted-teal)",
-        "soft-silver": "var(--soft-silver)",
-        "dark-card": "var(--dark-card)",
+        "vibrant-teal": "var(--vibrant-teal)",
+        "muted-gold": "var(--muted-gold)",
+        "card-darker": "var(--card-darker)",
         background: "var(--background)",
         foreground: "var(--foreground)",
         card: {

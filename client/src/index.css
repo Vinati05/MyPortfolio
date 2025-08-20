@@ -4,31 +4,31 @@
 @tailwind utilities;
 
 :root {
-  --background: #1f1f1f;
+  --background: #333333;
   --foreground: #e0e0e0;
-  --card: #2a2a2a;
+  --card: #404040;
   --card-foreground: #e0e0e0;
-  --popover: #2a2a2a;
+  --popover: #404040;
   --popover-foreground: #e0e0e0;
   --primary: #1e3a8a;
   --primary-foreground: #e0e0e0;
-  --secondary: #333333;
+  --secondary: #444444;
   --secondary-foreground: #e0e0e0;
-  --muted: #404040;
-  --muted-foreground: #a6a6a6;
-  --accent: #20c997;
-  --accent-foreground: #1f1f1f;
+  --muted: #555555;
+  --muted-foreground: #b0b0b0;
+  --accent: #1abc9c;
+  --accent-foreground: #333333;
   --destructive: hsl(0, 84%, 60%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --border: #a6a6a6;
-  --input: #333333;
+  --border: #666666;
+  --input: #444444;
   --ring: #1e3a8a;
-  --dark-gray: #1f1f1f;
-  --light-text: #e0e0e0;
+  --soft-dark-gray: #333333;
+  --light-gray-text: #e0e0e0;
   --deep-navy: #1e3a8a;
-  --muted-teal: #20c997;
-  --soft-silver: #a6a6a6;
-  --dark-card: #2a2a2a;
+  --vibrant-teal: #1abc9c;
+  --muted-gold: #f5b041;
+  --card-darker: #404040;
   --font-sans: 'Inter', sans-serif;
   --radius: 0.5rem;
 }
@@ -61,62 +61,66 @@
   }
   
   body {
-    @apply bg-dark-gray text-light-text font-sans antialiased;
+    @apply bg-soft-dark-gray text-light-gray-text font-sans antialiased;
     font-family: 'Inter', sans-serif;
   }
 }
 
 @layer utilities {
-  .dark-gray {
-    background-color: var(--dark-gray);
+  .soft-dark-gray {
+    background-color: var(--soft-dark-gray);
   }
   
-  .dark-card {
-    background-color: var(--dark-card);
+  .card-darker {
+    background-color: var(--card-darker);
   }
   
   .deep-navy {
     background-color: var(--deep-navy);
   }
   
-  .muted-teal {
-    background-color: var(--muted-teal);
+  .vibrant-teal {
+    background-color: var(--vibrant-teal);
   }
   
-  .text-light-text {
-    color: var(--light-text);
+  .muted-gold {
+    background-color: var(--muted-gold);
+  }
+  
+  .text-light-gray-text {
+    color: var(--light-gray-text);
   }
   
   .text-deep-navy {
     color: var(--deep-navy);
   }
   
-  .text-muted-teal {
-    color: var(--muted-teal);
+  .text-vibrant-teal {
+    color: var(--vibrant-teal);
   }
   
-  .text-soft-silver {
-    color: var(--soft-silver);
+  .text-muted-gold {
+    color: var(--muted-gold);
   }
   
-  .bg-dark-gray {
-    background-color: var(--dark-gray);
+  .bg-soft-dark-gray {
+    background-color: var(--soft-dark-gray);
   }
   
-  .bg-dark-card {
-    background-color: var(--dark-card);
+  .bg-card-darker {
+    background-color: var(--card-darker);
   }
   
   .border-deep-navy {
     border-color: var(--deep-navy);
   }
   
-  .border-muted-teal {
-    border-color: var(--muted-teal);
+  .border-vibrant-teal {
+    border-color: var(--vibrant-teal);
   }
   
-  .border-soft-silver {
-    border-color: var(--soft-silver);
+  .border-muted-gold {
+    border-color: var(--muted-gold);
   }
 }
 

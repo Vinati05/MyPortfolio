@@ -15,7 +15,7 @@ export function AboutSection() {
   return (
     <section 
       id="about" 
-      className="py-20 bg-dark-card"
+      className="py-20 bg-card-darker"
       data-testid="about-section"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,7 +24,7 @@ export function AboutSection() {
             <h2 className="text-4xl font-bold text-deep-navy" data-testid="about-title">
               About Me
             </h2>
-            <div className="text-lg text-soft-silver space-y-4" data-testid="about-description">
+            <div className="text-lg text-light-gray-text space-y-4" data-testid="about-description">
               <p>
                 I'm a Computer Science and Engineering student at VNRVJIET (Batch 2027) with a CGPA of 9.01, 
                 passionate about backend systems and AI-native development.
@@ -54,7 +54,7 @@ export function AboutSection() {
             </div>
             
             {/* Skills Cloud */}
-            <div className="bg-dark-gray p-6 rounded-xl border border-soft-silver" data-testid="skills-section">
+            <div className="bg-soft-dark-gray p-6 rounded-xl border border-gray-600" data-testid="skills-section">
               <h3 className="text-xl font-semibold mb-4 text-deep-navy">Core Skills</h3>
               <div className="flex flex-wrap gap-3">
                 {skills.map((skill, index) => (
@@ -63,8 +63,8 @@ export function AboutSection() {
                     variant="outline"
                     className={`skill-card px-4 py-2 rounded-full text-sm border transition-all cursor-pointer ${
                       skill.color === 'royal-blue' 
-                        ? 'bg-deep-navy/10 border-deep-navy/30 hover:bg-deep-navy/20 text-deep-navy' 
-                        : 'bg-muted-teal/10 border-muted-teal/30 hover:bg-muted-teal/20 text-muted-teal'
+                        ? 'bg-deep-navy/10 border-deep-navy/30 hover:bg-muted-gold/20 text-deep-navy hover:text-muted-gold' 
+                        : 'bg-vibrant-teal/10 border-vibrant-teal/30 hover:bg-muted-gold/20 text-vibrant-teal hover:text-muted-gold'
                     }`}
                     data-testid={`skill-${skill.name.toLowerCase().replace(/\//, '-')}`}
                   >

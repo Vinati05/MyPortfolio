@@ -40,7 +40,7 @@ export function ExperienceSection() {
   return (
     <section 
       id="experience" 
-      className="py-20 bg-dark-gray"
+      className="py-20 bg-soft-dark-gray"
       data-testid="experience-section"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,7 +48,7 @@ export function ExperienceSection() {
           <h2 className="text-4xl font-bold text-deep-navy mb-4" data-testid="experience-title">
             Experience
           </h2>
-          <p className="text-xl text-soft-silver">
+          <p className="text-xl text-light-gray-text">
             Professional journey and learning milestones
           </p>
         </div>
