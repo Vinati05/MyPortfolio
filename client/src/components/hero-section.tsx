@@ -33,12 +33,12 @@ export function HeroSection() {
   return (
     <section 
       id="hero" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-light-offwhite"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden ombre-bg"
       data-testid="hero-section"
     >
       {/* Floating Elements */}
       <div className="floating-element top-20 left-10 text-6xl animate-float">
-        <SiPython className="text-navy-blue" />
+        <SiPython className="text-deep-navy" />
       </div>
       <div 
         className="floating-element top-40 right-20 text-5xl animate-float"
@@ -50,7 +50,7 @@ export function HeroSection() {
         className="floating-element bottom-40 left-1/4 text-4xl animate-float"
         style={{ animationDelay: '-4s' }}
       >
-        <Database className="text-navy-blue" />
+        <Database className="text-deep-navy" />
       </div>
       <div 
         className="floating-element top-1/3 right-1/3 text-3xl animate-float"
@@ -61,11 +61,11 @@ export function HeroSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
         <div className="space-y-8">
-          <h1 className="text-5xl md:text-7xl font-bold text-navy-blue animate-glow" data-testid="hero-title">
+          <h1 className="text-5xl md:text-7xl font-bold text-deep-navy animate-glow" data-testid="hero-title">
             Vinati Vege
           </h1>
           
-          <div className="text-xl md:text-2xl text-dark-charcoal max-w-4xl mx-auto min-h-[2em]">
+          <div className="text-xl md:text-2xl text-light-gray-text max-w-4xl mx-auto min-h-[2em]">
             <span 
               className="terminal-text"
               data-testid="hero-tagline"
@@ -77,7 +77,7 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               onClick={() => scrollToSection('projects')}
-              className="bg-teal-accent hover:bg-teal-600 px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 text-white"
+              className="bg-muted-gold hover:bg-yellow-600 px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 text-soft-dark-gray shadow-lg"
               data-testid="button-explore-work"
             >
               Explore My Work
@@ -85,7 +85,7 @@ export function HeroSection() {
             <Button
               onClick={() => window.open('https://github.com/vinativege', '_blank')}
               variant="outline"
-              className="border-2 border-navy-blue text-navy-blue hover:bg-navy-blue hover:text-white px-8 py-4 rounded-lg font-semibold transition-all bg-transparent"
+              className="border-2 border-deep-navy text-deep-navy hover:bg-deep-navy hover:text-light-gray-text px-8 py-4 rounded-lg font-semibold transition-all bg-transparent shadow-lg"
               data-testid="button-view-github"
             >
               View GitHub

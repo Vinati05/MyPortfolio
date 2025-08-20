@@ -123,22 +123,22 @@ export function ProjectsSection() {
       music: Music
     };
     const IconComponent = icons[iconName as keyof typeof icons] || Bot;
-    return <IconComponent className="text-navy-blue text-2xl" />;
+    return <IconComponent className="text-deep-navy text-2xl" />;
   };
 
   return (
     <>
       <section 
         id="projects" 
-        className="py-20 bg-white-card"
+        className="py-20 bg-dark-card shadow-lg"
         data-testid="projects-section"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-navy-blue mb-4" data-testid="projects-title">
+            <h2 className="text-4xl font-bold text-deep-navy mb-4" data-testid="projects-title">
               Featured Projects
             </h2>
-            <p className="text-xl text-dark-charcoal">
+            <p className="text-xl text-light-gray-text">
               A showcase of innovation, creativity, and technical excellence
             </p>
           </div>
@@ -147,19 +147,19 @@ export function ProjectsSection() {
             {projects.map((project) => (
               <Card
                 key={project.id}
-                className="project-card p-6 rounded-xl cursor-pointer bg-light-offwhite border border-light-gray-border hover:shadow-xl hover:border-teal-accent/50 transition-all"
+                className="project-card p-6 rounded-xl cursor-pointer bg-soft-dark-gray border border-medium-gray hover:shadow-2xl hover:border-muted-gold/50 transition-all"
                 onClick={() => setSelectedProject(project)}
                 data-testid={`project-card-${project.id}`}
               >
                 <CardContent className="p-0">
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-semibold text-dark-charcoal">
+                    <h3 className="text-xl font-semibold text-light-gray-text">
                       {project.title}
                     </h3>
                     {getIcon(project.icon)}
                   </div>
                   
-                  <p className="text-dark-charcoal mb-4">
+                  <p className="text-light-gray-text mb-4">
                     {project.description}
                   </p>
                   
@@ -168,7 +168,7 @@ export function ProjectsSection() {
                       <Badge
                         key={tech}
                         variant="outline"
-                        className="bg-navy-blue/10 border-navy-blue/30 text-navy-blue text-xs px-3 py-1"
+                        className="bg-deep-navy/10 border-deep-navy/30 text-deep-navy text-xs px-3 py-1"
                       >
                         {tech}
                       </Badge>

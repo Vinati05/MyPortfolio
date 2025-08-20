@@ -15,16 +15,16 @@ export function AboutSection() {
   return (
     <section 
       id="about" 
-      className="py-20 bg-white-card"
+      className="py-20 ombre-bg"
       data-testid="about-section"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
-            <h2 className="text-4xl font-bold text-navy-blue" data-testid="about-title">
+            <h2 className="text-4xl font-bold text-deep-navy" data-testid="about-title">
               About Me
             </h2>
-            <div className="text-lg text-dark-charcoal space-y-4" data-testid="about-description">
+            <div className="text-lg text-light-gray-text space-y-4" data-testid="about-description">
               <p>
                 I'm a Computer Science and Engineering student at VNRVJIET (Batch 2027) with a CGPA of 9.01, 
                 passionate about backend systems and AI-native development.
@@ -44,18 +44,18 @@ export function AboutSection() {
           <div className="space-y-8">
             {/* Professional workspace image placeholder */}
             <div className="relative">
-              <div className="w-full h-64 bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl shadow-lg flex items-center justify-center border border-light-gray-border">
-                <div className="text-center text-navy-blue">
+              <div className="w-full h-64 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl shadow-2xl flex items-center justify-center border border-medium-gray">
+                <div className="text-center text-deep-navy">
                   <div className="text-6xl mb-4">💻</div>
                   <p className="text-sm opacity-75">Professional Developer Workspace</p>
                 </div>
               </div>
-              <div className="absolute inset-0 bg-navy-blue/10 rounded-xl"></div>
+              <div className="absolute inset-0 bg-deep-navy/10 rounded-xl"></div>
             </div>
             
             {/* Skills Cloud */}
-            <div className="bg-light-offwhite p-6 rounded-xl border border-light-gray-border" data-testid="skills-section">
-              <h3 className="text-xl font-semibold mb-4 text-navy-blue">Core Skills</h3>
+            <div className="bg-dark-card p-6 rounded-xl border border-medium-gray shadow-lg" data-testid="skills-section">
+              <h3 className="text-xl font-semibold mb-4 text-deep-navy">Core Skills</h3>
               <div className="flex flex-wrap gap-3">
                 {skills.map((skill, index) => (
                   <Badge
@@ -63,8 +63,8 @@ export function AboutSection() {
                     variant="outline"
                     className={`skill-card px-4 py-2 rounded-full text-sm border transition-all cursor-pointer ${
                       skill.color === 'royal-blue' 
-                        ? 'bg-navy-blue/10 border-navy-blue/30 hover:bg-teal-accent/20 text-navy-blue hover:text-teal-accent' 
-                        : 'bg-teal-accent/10 border-teal-accent/30 hover:bg-navy-blue/20 text-teal-accent hover:text-navy-blue'
+                        ? 'bg-deep-navy/10 border-deep-navy/30 hover:bg-muted-gold/20 text-deep-navy hover:text-muted-gold' 
+                        : 'bg-muted-gold/10 border-muted-gold/30 hover:bg-deep-navy/20 text-muted-gold hover:text-deep-navy'
                     }`}
                     data-testid={`skill-${skill.name.toLowerCase().replace(/\//, '-')}`}
                   >

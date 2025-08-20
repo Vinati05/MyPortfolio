@@ -6,12 +6,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        "light-offwhite": "var(--light-offwhite)",
-        "dark-charcoal": "var(--dark-charcoal)",
-        "navy-blue": "var(--navy-blue)",
-        "teal-accent": "var(--teal-accent)",
-        "light-gray-border": "var(--light-gray-border)",
-        "white-card": "var(--white-card)",
+        "soft-dark-gray": "var(--soft-dark-gray)",
+        "medium-gray": "var(--medium-gray)",
+        "light-gray-text": "var(--light-gray-text)",
+        "deep-navy": "var(--deep-navy)",
+        "muted-gold": "var(--muted-gold)",
+        "dark-card": "var(--dark-card)",
         background: "var(--background)",
         foreground: "var(--foreground)",
         card: {
