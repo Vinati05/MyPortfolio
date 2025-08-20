@@ -33,7 +33,7 @@ export function HeroSection() {
   return (
     <section 
       id="hero" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-off-white"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-deep-gray"
       data-testid="hero-section"
     >
       {/* Floating Elements */}
@@ -44,7 +44,7 @@ export function HeroSection() {
         className="floating-element top-40 right-20 text-5xl animate-float"
         style={{ animationDelay: '-2s' }}
       >
-        <SiJavascript className="text-emerald-green" />
+        <SiJavascript className="text-muted-teal" />
       </div>
       <div 
         className="floating-element bottom-40 left-1/4 text-4xl animate-float"
@@ -56,7 +56,7 @@ export function HeroSection() {
         className="floating-element top-1/3 right-1/3 text-3xl animate-float"
         style={{ animationDelay: '-1s' }}
       >
-        <Brain className="text-emerald-green" />
+        <Brain className="text-muted-teal" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
@@ -65,7 +65,7 @@ export function HeroSection() {
             Vinati Vege
           </h1>
           
-          <div className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto min-h-[2em]">
+          <div className="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto min-h-[2em]">
             <span 
               className="terminal-text"
               data-testid="hero-tagline"
@@ -77,7 +77,7 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               onClick={() => scrollToSection('projects')}
-              className="bg-royal-blue hover:bg-blue-700 px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105"
+              className="bg-royal-blue hover:bg-blue-800 px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 text-white"
               data-testid="button-explore-work"
             >
               Explore My Work
@@ -85,7 +85,7 @@ export function HeroSection() {
             <Button
               onClick={() => window.open('https://github.com/vinativege', '_blank')}
               variant="outline"
-              className="border-2 border-royal-blue text-royal-blue hover:bg-royal-blue hover:text-white px-8 py-4 rounded-lg font-semibold transition-all"
+              className="border-2 border-royal-blue text-royal-blue hover:bg-royal-blue hover:text-white px-8 py-4 rounded-lg font-semibold transition-all bg-transparent"
               data-testid="button-view-github"
             >
               View GitHub

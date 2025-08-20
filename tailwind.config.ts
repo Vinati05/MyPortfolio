@@ -6,11 +6,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        "light-gray": "var(--light-gray)",
-        "off-white": "var(--off-white)",
+        "deep-gray": "var(--deep-gray)",
+        "light-text": "var(--light-text)",
         "royal-blue": "var(--royal-blue)",
-        "emerald-green": "var(--emerald-green)",
-        "dark-charcoal": "var(--dark-charcoal)",
+        "muted-teal": "var(--muted-teal)",
+        "dark-card": "var(--dark-card)",
         background: "var(--background)",
         foreground: "var(--foreground)",
         card: {
