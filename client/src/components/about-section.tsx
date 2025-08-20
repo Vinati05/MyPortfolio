@@ -2,29 +2,29 @@ import { Badge } from '@/components/ui/badge';
 
 export function AboutSection() {
   const skills = [
-    { name: 'Python', color: 'electric-blue' },
-    { name: 'JavaScript', color: 'accent-green' },
-    { name: 'Django', color: 'electric-blue' },
-    { name: 'Machine Learning', color: 'accent-green' },
-    { name: 'PostgreSQL', color: 'electric-blue' },
-    { name: 'React', color: 'accent-green' },
-    { name: 'Docker', color: 'electric-blue' },
-    { name: 'AI/ML', color: 'accent-green' },
+    { name: 'Python', color: 'royal-blue' },
+    { name: 'JavaScript', color: 'emerald-green' },
+    { name: 'Django', color: 'royal-blue' },
+    { name: 'Machine Learning', color: 'emerald-green' },
+    { name: 'PostgreSQL', color: 'royal-blue' },
+    { name: 'React', color: 'emerald-green' },
+    { name: 'Docker', color: 'royal-blue' },
+    { name: 'AI/ML', color: 'emerald-green' },
   ];
 
   return (
     <section 
       id="about" 
-      className="py-20 bg-dark-blue"
+      className="py-20 bg-white"
       data-testid="about-section"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
-            <h2 className="text-4xl font-bold text-electric-blue" data-testid="about-title">
+            <h2 className="text-4xl font-bold text-royal-blue" data-testid="about-title">
               About Me
             </h2>
-            <div className="text-lg text-gray-300 space-y-4" data-testid="about-description">
+            <div className="text-lg text-gray-600 space-y-4" data-testid="about-description">
               <p>
                 I'm a Computer Science and Engineering student at VNRVJIET (Batch 2027) with a CGPA of 9.01, 
                 passionate about backend systems and AI-native development.
@@ -44,27 +44,27 @@ export function AboutSection() {
           <div className="space-y-8">
             {/* Professional workspace image placeholder */}
             <div className="relative">
-              <div className="w-full h-64 bg-gradient-to-br from-dark-blue to-navy rounded-xl shadow-2xl flex items-center justify-center border border-electric-blue/20">
-                <div className="text-center text-electric-blue">
+              <div className="w-full h-64 bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl shadow-lg flex items-center justify-center border border-royal-blue/20">
+                <div className="text-center text-royal-blue">
                   <div className="text-6xl mb-4">💻</div>
                   <p className="text-sm opacity-75">Professional Developer Workspace</p>
                 </div>
               </div>
-              <div className="absolute inset-0 bg-electric-blue/20 rounded-xl"></div>
+              <div className="absolute inset-0 bg-royal-blue/10 rounded-xl"></div>
             </div>
             
             {/* Skills Cloud */}
-            <div className="bg-navy/50 p-6 rounded-xl" data-testid="skills-section">
-              <h3 className="text-xl font-semibold mb-4 text-electric-blue">Core Skills</h3>
+            <div className="bg-gray-50 p-6 rounded-xl border border-gray-200" data-testid="skills-section">
+              <h3 className="text-xl font-semibold mb-4 text-royal-blue">Core Skills</h3>
               <div className="flex flex-wrap gap-3">
                 {skills.map((skill, index) => (
                   <Badge
                     key={skill.name}
                     variant="outline"
                     className={`skill-card px-4 py-2 rounded-full text-sm border transition-all cursor-pointer ${
-                      skill.color === 'electric-blue' 
-                        ? 'bg-electric-blue/20 border-electric-blue/30 hover:bg-electric-blue/30' 
-                        : 'bg-accent-green/20 border-accent-green/30 hover:bg-accent-green/30'
+                      skill.color === 'royal-blue' 
+                        ? 'bg-royal-blue/10 border-royal-blue/30 hover:bg-royal-blue/20 text-royal-blue' 
+                        : 'bg-emerald-green/10 border-emerald-green/30 hover:bg-emerald-green/20 text-emerald-green'
                     }`}
                     data-testid={`skill-${skill.name.toLowerCase().replace(/\//, '-')}`}
                   >

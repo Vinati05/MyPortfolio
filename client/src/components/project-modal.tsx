@@ -21,39 +21,39 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
       <div className="modal-content">
         <div className="relative">
           <button
-            className="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl z-10"
+            className="absolute top-4 right-4 text-gray-600 hover:text-dark-charcoal text-2xl z-10"
             onClick={onClose}
             data-testid="button-close-modal"
           >
             <X />
           </button>
           
-          <div className="w-full h-64 bg-gradient-to-br from-dark-blue to-navy rounded-t-xl flex items-center justify-center border-b border-electric-blue/20">
-            <div className="text-center text-electric-blue">
+          <div className="w-full h-64 bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-xl flex items-center justify-center border-b border-gray-200">
+            <div className="text-center text-royal-blue">
               <div className="text-6xl mb-4">💻</div>
               <p className="text-sm opacity-75">{project.title}</p>
             </div>
           </div>
           
           <div className="p-8">
-            <h3 className="text-3xl font-bold text-electric-blue mb-4" data-testid="modal-title">
+            <h3 className="text-3xl font-bold text-royal-blue mb-4" data-testid="modal-title">
               {project.title}
             </h3>
-            <p className="text-gray-300 mb-6" data-testid="modal-description">
+            <p className="text-gray-600 mb-6" data-testid="modal-description">
               {project.details.fullDescription}
             </p>
             
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
-                <h4 className="text-lg font-semibold text-white mb-2">Tech Stack</h4>
+                <h4 className="text-lg font-semibold text-dark-charcoal mb-2">Tech Stack</h4>
                 <div className="space-y-2">
                   {project.tech.map((tech, index) => (
                     <Badge
                       key={tech}
                       className={`block w-fit px-3 py-1 rounded ${
                         index % 2 === 0 
-                          ? 'bg-electric-blue/20 text-electric-blue' 
-                          : 'bg-accent-green/20 text-accent-green'
+                          ? 'bg-royal-blue/10 text-royal-blue border-royal-blue/30' 
+                          : 'bg-emerald-green/10 text-emerald-green border-emerald-green/30'
                       }`}
                     >
                       {tech}
@@ -63,8 +63,8 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               </div>
               
               <div>
-                <h4 className="text-lg font-semibold text-white mb-2">Key Features</h4>
-                <ul className="space-y-1 text-gray-300">
+                <h4 className="text-lg font-semibold text-dark-charcoal mb-2">Key Features</h4>
+                <ul className="space-y-1 text-gray-600">
                   {project.details.features.map((feature) => (
                     <li key={feature}>• {feature}</li>
                   ))}
@@ -74,15 +74,15 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
             {project.details.challenges && (
               <div className="mb-6">
-                <h4 className="text-lg font-semibold text-white mb-2">Challenges</h4>
-                <p className="text-gray-300">{project.details.challenges}</p>
+                <h4 className="text-lg font-semibold text-dark-charcoal mb-2">Challenges</h4>
+                <p className="text-gray-600">{project.details.challenges}</p>
               </div>
             )}
 
             {project.details.impact && (
               <div className="mb-6">
-                <h4 className="text-lg font-semibold text-white mb-2">Impact</h4>
-                <p className="text-gray-300">{project.details.impact}</p>
+                <h4 className="text-lg font-semibold text-dark-charcoal mb-2">Impact</h4>
+                <p className="text-gray-600">{project.details.impact}</p>
               </div>
             )}
             

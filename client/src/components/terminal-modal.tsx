@@ -123,16 +123,16 @@ export function TerminalModal({ isOpen, onClose }: TerminalModalProps) {
       data-testid="terminal-modal"
     >
       <div className="modal-content terminal">
-        <div className="bg-dark-blue px-4 py-2 rounded-t-lg flex justify-between items-center">
+        <div className="bg-dark-charcoal px-4 py-2 rounded-t-lg flex justify-between items-center">
           <div className="flex space-x-2">
             <div className="w-3 h-3 bg-red-500 rounded-full"></div>
             <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
             <div className="w-3 h-3 bg-green-500 rounded-full"></div>
           </div>
-          <span className="text-sm">vinati@portfolio:~</span>
+          <span className="text-sm text-emerald-green">vinati@portfolio:~</span>
           <button 
             onClick={onClose}
-            className="text-gray-400 hover:text-white"
+            className="text-gray-400 hover:text-gray-200"
             data-testid="button-close-terminal"
           >
             <X />
@@ -143,12 +143,12 @@ export function TerminalModal({ isOpen, onClose }: TerminalModalProps) {
           ref={outputRef}
           className="p-6 h-96 overflow-y-auto"
         >
-          <div className="text-green-400 text-sm space-y-2 font-mono">
+          <div className="text-emerald-green text-sm space-y-2 font-mono">
             {history.map((item, index) => (
               <div key={index}>
                 {item.command && (
                   <div className="flex">
-                    <span className="text-electric-blue">vinati@portfolio:~$ </span>
+                    <span className="text-royal-blue">vinati@portfolio:~$ </span>
                     <span className="ml-2">{item.command}</span>
                   </div>
                 )}
@@ -163,13 +163,13 @@ export function TerminalModal({ isOpen, onClose }: TerminalModalProps) {
             ))}
             
             <form onSubmit={handleSubmit} className="flex">
-              <span className="text-electric-blue">vinati@portfolio:~$ </span>
+              <span className="text-royal-blue">vinati@portfolio:~$ </span>
               <input
                 ref={inputRef}
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                className="bg-transparent outline-none flex-1 text-green-400 ml-2"
+                className="bg-transparent outline-none flex-1 text-emerald-green ml-2"
                 data-testid="input-terminal"
               />
             </form>

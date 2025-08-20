@@ -6,10 +6,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        navy: "var(--navy)",
-        "dark-blue": "var(--dark-blue)",
-        "electric-blue": "var(--electric-blue)",
-        "accent-green": "var(--accent-green)",
+        "light-gray": "var(--light-gray)",
+        "off-white": "var(--off-white)",
+        "royal-blue": "var(--royal-blue)",
+        "emerald-green": "var(--emerald-green)",
+        "dark-charcoal": "var(--dark-charcoal)",
         background: "var(--background)",
         foreground: "var(--foreground)",
         card: {
@@ -81,8 +82,8 @@ export default {
           "100%": { transform: "translateY(0px)" },
         },
         glow: {
-          from: { boxShadow: "0 0 20px var(--electric-blue)" },
-          to: { boxShadow: "0 0 30px var(--electric-blue), 0 0 40px var(--electric-blue)" },
+          from: { boxShadow: "0 0 20px var(--royal-blue)" },
+          to: { boxShadow: "0 0 30px var(--royal-blue), 0 0 40px var(--royal-blue)" },
         },
         typing: {
           from: { width: "0" },
@@ -90,7 +91,7 @@ export default {
         },
         "blink-caret": {
           "from, to": { borderColor: "transparent" },
-          "50%": { borderColor: "var(--electric-blue)" },
+          "50%": { borderColor: "var(--royal-blue)" },
         },
         "accordion-down": {
           from: {

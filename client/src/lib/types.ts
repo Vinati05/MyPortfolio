@@ -21,7 +21,7 @@ export interface Achievement {
   organization: string;
   description: string;
   icon: string;
-  color: 'electric-blue' | 'accent-green';
+  color: 'royal-blue' | 'emerald-green';
 }
 
 export interface Experience {

@@ -10,7 +10,7 @@ export function AchievementsSection() {
       organization: 'Turing Hut Contest',
       description: 'Achieved top 50 ranking in competitive programming contest among thousands of participants',
       icon: 'trophy',
-      color: 'electric-blue'
+      color: 'royal-blue'
     },
     {
       id: 'icdh-research',
@@ -18,7 +18,7 @@ export function AchievementsSection() {
       organization: 'ICDH Conference',
       description: 'Published research paper on innovative computing solutions at international conference',
       icon: 'file',
-      color: 'accent-green'
+      color: 'emerald-green'
     },
     {
       id: 'tedx-host',
@@ -26,7 +26,7 @@ export function AchievementsSection() {
       organization: 'Event Management',
       description: 'Successfully hosted and coordinated TEDx events, managing speakers and audience engagement',
       icon: 'mic',
-      color: 'electric-blue'
+      color: 'royal-blue'
     },
     {
       id: 'cultural-leadership',
@@ -34,7 +34,7 @@ export function AchievementsSection() {
       organization: 'Event Coordination',
       description: 'Led and organized multiple cultural events, demonstrating leadership and team management skills',
       icon: 'users',
-      color: 'accent-green'
+      color: 'emerald-green'
     },
     {
       id: 'toastmasters',
@@ -42,7 +42,7 @@ export function AchievementsSection() {
       organization: 'Public Speaking',
       description: 'Active member developing communication and leadership skills through structured speaking programs',
       icon: 'message',
-      color: 'electric-blue'
+      color: 'royal-blue'
     },
     {
       id: 'academic-excellence',
@@ -50,7 +50,7 @@ export function AchievementsSection() {
       organization: 'CGPA 9.01',
       description: 'Consistent high academic performance demonstrating dedication and strong foundational knowledge',
       icon: 'medal',
-      color: 'accent-green'
+      color: 'emerald-green'
     }
   ];
 
@@ -70,15 +70,15 @@ export function AchievementsSection() {
   return (
     <section 
       id="achievements" 
-      className="py-20 bg-navy"
+      className="py-20 bg-light-gray"
       data-testid="achievements-section"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-electric-blue mb-4" data-testid="achievements-title">
+          <h2 className="text-4xl font-bold text-royal-blue mb-4" data-testid="achievements-title">
             Achievements & Recognition
           </h2>
-          <p className="text-xl text-gray-300">
+          <p className="text-xl text-gray-600">
             Highlights of academic and professional accomplishments
           </p>
         </div>
@@ -89,36 +89,36 @@ export function AchievementsSection() {
             return (
               <Card
                 key={achievement.id}
-                className={`bg-dark-blue p-6 rounded-xl border text-center transition-all hover:scale-105 ${
-                  achievement.color === 'electric-blue' 
-                    ? 'border-electric-blue/20 hover:border-electric-blue/50' 
-                    : 'border-accent-green/20 hover:border-accent-green/50'
+                className={`bg-white p-6 rounded-xl border shadow-lg text-center transition-all hover:scale-105 ${
+                  achievement.color === 'royal-blue' 
+                    ? 'border-gray-200 hover:border-royal-blue/50 hover:shadow-xl' 
+                    : 'border-gray-200 hover:border-emerald-green/50 hover:shadow-xl'
                 }`}
                 data-testid={`achievement-card-${achievement.id}`}
               >
                 <CardContent className="p-0">
                   <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${
-                    achievement.color === 'electric-blue' 
-                      ? 'bg-electric-blue/20' 
-                      : 'bg-accent-green/20'
+                    achievement.color === 'royal-blue' 
+                      ? 'bg-royal-blue/10' 
+                      : 'bg-emerald-green/10'
                   }`}>
                     <IconComponent className={`text-2xl ${
-                      achievement.color === 'electric-blue' 
-                        ? 'text-electric-blue' 
-                        : 'text-accent-green'
+                      achievement.color === 'royal-blue' 
+                        ? 'text-royal-blue' 
+                        : 'text-emerald-green'
                     }`} />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">
+                  <h3 className="text-lg font-semibold text-dark-charcoal mb-2">
                     {achievement.title}
                   </h3>
                   <p className={`font-medium mb-2 ${
-                    achievement.color === 'electric-blue' 
-                      ? 'text-electric-blue' 
-                      : 'text-accent-green'
+                    achievement.color === 'royal-blue' 
+                      ? 'text-royal-blue' 
+                      : 'text-emerald-green'
                   }`}>
                     {achievement.organization}
                   </p>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-gray-600 text-sm">
                     {achievement.description}
                   </p>
                 </CardContent>

@@ -40,37 +40,37 @@ export function ExperienceSection() {
   return (
     <section 
       id="experience" 
-      className="py-20 bg-dark-blue"
+      className="py-20 bg-white"
       data-testid="experience-section"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-electric-blue mb-4" data-testid="experience-title">
+          <h2 className="text-4xl font-bold text-royal-blue mb-4" data-testid="experience-title">
             Experience
           </h2>
-          <p className="text-xl text-gray-300">
+          <p className="text-xl text-gray-600">
             Professional journey and learning milestones
           </p>
         </div>
         
         {/* Timeline */}
         <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-electric-blue/30"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-royal-blue/30"></div>
           
           {experiences.map((exp, index) => (
             <div key={exp.id} className="relative flex items-center mb-16">
               {index % 2 === 0 ? (
                 <>
                   <div className="flex-1 pr-8 text-right">
-                    <Card className="bg-navy/50 border border-electric-blue/20" data-testid={`experience-card-${exp.id}`}>
+                    <Card className="bg-white border border-gray-200 shadow-lg" data-testid={`experience-card-${exp.id}`}>
                       <CardContent className="p-6">
-                        <h3 className="text-xl font-semibold text-white mb-2">
+                        <h3 className="text-xl font-semibold text-dark-charcoal mb-2">
                           {exp.title}
                         </h3>
-                        <h4 className={`font-medium mb-2 ${exp.type === 'work' ? 'text-electric-blue' : 'text-accent-green'}`}>
+                        <h4 className={`font-medium mb-2 ${exp.type === 'work' ? 'text-royal-blue' : 'text-emerald-green'}`}>
                           {exp.company}
                         </h4>
-                        <p className="text-gray-300 mb-4">
+                        <p className="text-gray-600 mb-4">
                           {exp.description}
                         </p>
                         <div className="flex justify-end space-x-2">
@@ -79,8 +79,8 @@ export function ExperienceSection() {
                               key={tech}
                               className={`px-3 py-1 rounded-full text-xs ${
                                 exp.type === 'work' 
-                                  ? 'bg-electric-blue/20 text-electric-blue' 
-                                  : 'bg-accent-green/20 text-accent-green'
+                                  ? 'bg-royal-blue/10 text-royal-blue border-royal-blue/30' 
+                                  : 'bg-emerald-green/10 text-emerald-green border-emerald-green/30'
                               }`}
                             >
                               {tech}
@@ -90,8 +90,8 @@ export function ExperienceSection() {
                       </CardContent>
                     </Card>
                   </div>
-                  <div className={`absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center ${
-                    exp.type === 'work' ? 'bg-electric-blue' : 'bg-accent-green'
+                  <div className={`absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center shadow-lg ${
+                    exp.type === 'work' ? 'bg-royal-blue' : 'bg-emerald-green'
                   }`}>
                     {exp.type === 'work' ? (
                       <Briefcase className="text-white w-6 h-6" />
@@ -100,7 +100,7 @@ export function ExperienceSection() {
                     )}
                   </div>
                   <div className="flex-1 pl-8">
-                    <div className={`text-lg font-semibold ${exp.type === 'work' ? 'text-electric-blue' : 'text-accent-green'}`}>
+                    <div className={`text-lg font-semibold ${exp.type === 'work' ? 'text-royal-blue' : 'text-emerald-green'}`}>
                       {exp.period}
                     </div>
                   </div>
@@ -108,12 +108,12 @@ export function ExperienceSection() {
               ) : (
                 <>
                   <div className="flex-1 pr-8 text-right">
-                    <div className={`text-lg font-semibold ${exp.type === 'work' ? 'text-electric-blue' : 'text-accent-green'}`}>
+                    <div className={`text-lg font-semibold ${exp.type === 'work' ? 'text-royal-blue' : 'text-emerald-green'}`}>
                       {exp.period}
                     </div>
                   </div>
-                  <div className={`absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center ${
-                    exp.type === 'work' ? 'bg-electric-blue' : 'bg-accent-green'
+                  <div className={`absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center shadow-lg ${
+                    exp.type === 'work' ? 'bg-royal-blue' : 'bg-emerald-green'
                   }`}>
                     {exp.type === 'work' ? (
                       <Briefcase className="text-white w-6 h-6" />
@@ -122,15 +122,15 @@ export function ExperienceSection() {
                     )}
                   </div>
                   <div className="flex-1 pl-8">
-                    <Card className={`border ${exp.type === 'work' ? 'bg-navy/50 border-electric-blue/20' : 'bg-navy/50 border-accent-green/20'}`} data-testid={`experience-card-${exp.id}`}>
+                    <Card className="bg-white border border-gray-200 shadow-lg" data-testid={`experience-card-${exp.id}`}>
                       <CardContent className="p-6">
-                        <h3 className="text-xl font-semibold text-white mb-2">
+                        <h3 className="text-xl font-semibold text-dark-charcoal mb-2">
                           {exp.title}
                         </h3>
-                        <h4 className={`font-medium mb-2 ${exp.type === 'work' ? 'text-electric-blue' : 'text-accent-green'}`}>
+                        <h4 className={`font-medium mb-2 ${exp.type === 'work' ? 'text-royal-blue' : 'text-emerald-green'}`}>
                           {exp.company}
                         </h4>
-                        <p className="text-gray-300 mb-4">
+                        <p className="text-gray-600 mb-4">
                           {exp.description}
                         </p>
                         <div className="flex space-x-2">
@@ -139,8 +139,8 @@ export function ExperienceSection() {
                               key={tech}
                               className={`px-3 py-1 rounded-full text-xs ${
                                 exp.type === 'work' 
-                                  ? 'bg-electric-blue/20 text-electric-blue' 
-                                  : 'bg-accent-green/20 text-accent-green'
+                                  ? 'bg-royal-blue/10 text-royal-blue border-royal-blue/30' 
+                                  : 'bg-emerald-green/10 text-emerald-green border-emerald-green/30'
                               }`}
                             >
                               {tech}
