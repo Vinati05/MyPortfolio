@@ -61,9 +61,8 @@ export function HeroSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
         <div className="space-y-8">
-          <h1 className="text-5xl md:text-7xl font-bold" data-testid="hero-title">
-            <span className="text-dark-charcoal">Vinati</span>
-            <span className="text-royal-blue animate-glow ml-4">Vege</span>
+          <h1 className="text-5xl md:text-7xl font-bold text-royal-blue animate-glow" data-testid="hero-title">
+            Vinati Vege
           </h1>
           
           <div className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto min-h-[2em]">
