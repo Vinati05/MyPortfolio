@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Bot, Eye, ChevronsRight, ShoppingCart, Music, Plus, ArrowRight } from 'lucide-react';
-import { ProjectModal } from './project-modal';
+import { ProjectModal } from '@/components/project-modal';
 import type { Project } from '@/lib/types';
 
 export function ProjectsSection() {
