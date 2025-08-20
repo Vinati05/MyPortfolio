@@ -28,7 +28,7 @@ export function Navigation({ onTerminalToggle }: NavigationProps) {
   return (
     <nav 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm' : ''
+        isScrolled ? 'bg-light-card/95 backdrop-blur-md border-b border-gray-300 shadow-sm' : ''
       }`}
       data-testid="navigation"
     >

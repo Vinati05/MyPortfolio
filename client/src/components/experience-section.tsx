@@ -40,7 +40,7 @@ export function ExperienceSection() {
   return (
     <section 
       id="experience" 
-      className="py-20 bg-off-white"
+      className="py-20 bg-muted-gray"
       data-testid="experience-section"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

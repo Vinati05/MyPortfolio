@@ -123,13 +123,13 @@ export function TerminalModal({ isOpen, onClose }: TerminalModalProps) {
       data-testid="terminal-modal"
     >
       <div className="modal-content terminal">
-        <div className="bg-dark-charcoal px-4 py-2 rounded-t-lg flex justify-between items-center">
+        <div className="bg-charcoal-text px-4 py-2 rounded-t-lg flex justify-between items-center">
           <div className="flex space-x-2">
             <div className="w-3 h-3 bg-red-500 rounded-full"></div>
             <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
             <div className="w-3 h-3 bg-green-500 rounded-full"></div>
           </div>
-          <span className="text-sm text-emerald-green">vinati@portfolio:~</span>
+          <span className="text-sm text-muted-teal">vinati@portfolio:~</span>
           <button 
             onClick={onClose}
             className="text-gray-400 hover:text-gray-200"
@@ -143,7 +143,7 @@ export function TerminalModal({ isOpen, onClose }: TerminalModalProps) {
           ref={outputRef}
           className="p-6 h-96 overflow-y-auto"
         >
-          <div className="text-emerald-green text-sm space-y-2 font-mono">
+          <div className="text-muted-teal text-sm space-y-2 font-mono">
             {history.map((item, index) => (
               <div key={index}>
                 {item.command && (

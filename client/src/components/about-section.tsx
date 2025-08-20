@@ -3,19 +3,19 @@ import { Badge } from '@/components/ui/badge';
 export function AboutSection() {
   const skills = [
     { name: 'Python', color: 'royal-blue' },
-    { name: 'JavaScript', color: 'emerald-green' },
+    { name: 'JavaScript', color: 'muted-teal' },
     { name: 'Django', color: 'royal-blue' },
-    { name: 'Machine Learning', color: 'emerald-green' },
+    { name: 'Machine Learning', color: 'muted-teal' },
     { name: 'PostgreSQL', color: 'royal-blue' },
-    { name: 'React', color: 'emerald-green' },
+    { name: 'React', color: 'muted-teal' },
     { name: 'Docker', color: 'royal-blue' },
-    { name: 'AI/ML', color: 'emerald-green' },
+    { name: 'AI/ML', color: 'muted-teal' },
   ];
 
   return (
     <section 
       id="about" 
-      className="py-20 bg-off-white"
+      className="py-20 bg-light-card"
       data-testid="about-section"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,7 +64,7 @@ export function AboutSection() {
                     className={`skill-card px-4 py-2 rounded-full text-sm border transition-all cursor-pointer ${
                       skill.color === 'royal-blue' 
                         ? 'bg-royal-blue/10 border-royal-blue/30 hover:bg-royal-blue/20 text-royal-blue' 
-                        : 'bg-emerald-green/10 border-emerald-green/30 hover:bg-emerald-green/20 text-emerald-green'
+                        : 'bg-muted-teal/10 border-muted-teal/30 hover:bg-muted-teal/20 text-muted-teal'
                     }`}
                     data-testid={`skill-${skill.name.toLowerCase().replace(/\//, '-')}`}
                   >

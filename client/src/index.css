@@ -4,30 +4,30 @@
 @tailwind utilities;
 
 :root {
-  --background: #1e1e1e;
-  --foreground: #f0f0f0;
-  --card: #2a2a2a;
-  --card-foreground: #f0f0f0;
-  --popover: #2a2a2a;
-  --popover-foreground: #f0f0f0;
+  --background: #e0e0e0;
+  --foreground: #2c2c2c;
+  --card: #f5f5f5;
+  --card-foreground: #2c2c2c;
+  --popover: #f5f5f5;
+  --popover-foreground: #2c2c2c;
   --primary: #1e3a8a;
-  --primary-foreground: #f0f0f0;
-  --secondary: #3a3a3a;
-  --secondary-foreground: #f0f0f0;
-  --muted: #404040;
-  --muted-foreground: #a0a0a0;
+  --primary-foreground: #ffffff;
+  --secondary: #d0d0d0;
+  --secondary-foreground: #2c2c2c;
+  --muted: #c8c8c8;
+  --muted-foreground: #666666;
   --accent: #20c997;
-  --accent-foreground: #1e1e1e;
+  --accent-foreground: #ffffff;
   --destructive: hsl(0, 84%, 60%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --border: #404040;
-  --input: #3a3a3a;
+  --border: #c0c0c0;
+  --input: #f0f0f0;
   --ring: #1e3a8a;
-  --deep-gray: #1e1e1e;
-  --light-text: #f0f0f0;
+  --muted-gray: #e0e0e0;
+  --charcoal-text: #2c2c2c;
   --royal-blue: #1e3a8a;
   --muted-teal: #20c997;
-  --dark-card: #2a2a2a;
+  --light-card: #f5f5f5;
   --font-sans: 'Inter', sans-serif;
   --radius: 0.5rem;
 }
@@ -60,18 +60,18 @@
   }
   
   body {
-    @apply bg-deep-gray text-light-text font-sans antialiased;
+    @apply bg-muted-gray text-charcoal-text font-sans antialiased;
     font-family: 'Inter', sans-serif;
   }
 }
 
 @layer utilities {
-  .deep-gray {
-    background-color: var(--deep-gray);
+  .muted-gray {
+    background-color: var(--muted-gray);
   }
   
-  .dark-card {
-    background-color: var(--dark-card);
+  .light-card {
+    background-color: var(--light-card);
   }
   
   .royal-blue {
@@ -82,8 +82,8 @@
     background-color: var(--muted-teal);
   }
   
-  .text-light-text {
-    color: var(--light-text);
+  .text-charcoal-text {
+    color: var(--charcoal-text);
   }
   
   .text-royal-blue {
@@ -94,12 +94,12 @@
     color: var(--muted-teal);
   }
   
-  .bg-deep-gray {
-    background-color: var(--deep-gray);
+  .bg-muted-gray {
+    background-color: var(--muted-gray);
   }
   
-  .bg-dark-card {
-    background-color: var(--dark-card);
+  .bg-light-card {
+    background-color: var(--light-card);
   }
   
   .border-royal-blue {
@@ -110,7 +110,7 @@
     border-color: var(--muted-teal);
   }
   
-  .border-dark {
+  .border-light {
     border-color: var(--border);
   }
 }

@@ -130,7 +130,7 @@ export function ProjectsSection() {
     <>
       <section 
         id="projects" 
-        className="py-20 bg-off-white"
+        className="py-20 bg-light-card"
         data-testid="projects-section"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -147,13 +147,13 @@ export function ProjectsSection() {
             {projects.map((project) => (
               <Card
                 key={project.id}
-                className="project-card p-6 rounded-xl cursor-pointer bg-white border border-gray-200 hover:shadow-xl hover:border-royal-blue/30 transition-all"
+                className="project-card p-6 rounded-xl cursor-pointer bg-white border border-gray-300 hover:shadow-xl hover:border-royal-blue/30 transition-all"
                 onClick={() => setSelectedProject(project)}
                 data-testid={`project-card-${project.id}`}
               >
                 <CardContent className="p-0">
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-semibold text-dark-charcoal">
+                    <h3 className="text-xl font-semibold text-charcoal-text">
                       {project.title}
                     </h3>
                     {getIcon(project.icon)}
