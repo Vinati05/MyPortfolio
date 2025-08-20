@@ -78,7 +78,7 @@ export function AchievementsSection() {
           <h2 className="text-4xl font-bold text-vibrant-teal mb-4" data-testid="achievements-title">
             Achievements & Recognition
           </h2>
-          <p className="text-xl text-soft-cream-text">
+          <p className="text-xl text-dark-gray-text">
             Highlights of academic and professional accomplishments
           </p>
         </div>

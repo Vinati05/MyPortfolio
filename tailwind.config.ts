@@ -11,6 +11,7 @@ export default {
         "crisp-white": "var(--crisp-white)",
         "electric-teal": "var(--electric-teal)",
         "vibrant-teal": "var(--vibrant-teal)",
+        "dark-gray-text": "var(--dark-gray-text)",
         "coral-accent": "var(--coral-accent)",
         "card-navy": "var(--card-navy)",
         background: "var(--background)",
