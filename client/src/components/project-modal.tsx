@@ -36,16 +36,16 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
           </div>
           
           <div className="p-8">
-            <h3 className="text-3xl font-bold text-royal-blue mb-4" data-testid="modal-title">
+            <h3 className="text-3xl font-bold text-dark-gray-text mb-4" data-testid="modal-title">
               {project.title}
             </h3>
-            <p className="text-gray-600 mb-6" data-testid="modal-description">
+            <p className="text-dark-gray-text mb-6" data-testid="modal-description">
               {project.details.fullDescription}
             </p>
             
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
-                <h4 className="text-lg font-semibold text-dark-charcoal mb-2">Tech Stack</h4>
+                <h4 className="text-lg font-semibold text-dark-gray-text mb-2">Tech Stack</h4>
                 <div className="space-y-2">
                   {project.tech.map((tech, index) => (
                     <Badge
@@ -63,8 +63,8 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               </div>
               
               <div>
-                <h4 className="text-lg font-semibold text-dark-charcoal mb-2">Key Features</h4>
-                <ul className="space-y-1 text-gray-600">
+                <h4 className="text-lg font-semibold text-dark-gray-text mb-2">Key Features</h4>
+                <ul className="space-y-1 text-dark-gray-text">
                   {project.details.features.map((feature) => (
                     <li key={feature}>• {feature}</li>
                   ))}

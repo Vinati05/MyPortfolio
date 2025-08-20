@@ -111,11 +111,7 @@ export function AchievementsSection() {
                   <h3 className="text-lg font-semibold text-dark-gray-text mb-2">
                     {achievement.title}
                   </h3>
-                  <p className={`font-medium mb-2 ${
-                    achievement.color === 'royal-blue' 
-                      ? 'text-royal-blue' 
-                      : 'text-emerald-green'
-                  }`}>
+                  <p className="font-medium mb-2 text-dark-gray-text">
                     {achievement.organization}
                   </p>
                   <p className="text-dark-gray-text text-sm">
