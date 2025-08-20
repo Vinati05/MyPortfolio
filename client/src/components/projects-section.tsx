@@ -153,13 +153,13 @@ export function ProjectsSection() {
               >
                 <CardContent className="p-0">
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-semibold text-crisp-white">
+                    <h3 className="text-xl font-semibold text-dark-gray-text">
                       {project.title}
                     </h3>
                     {getIcon(project.icon)}
                   </div>
                   
-                  <p className="text-soft-cream-text mb-4">
+                  <p className="text-dark-gray-text mb-4">
                     {project.description}
                   </p>
                   

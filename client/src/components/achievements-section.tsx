@@ -108,7 +108,7 @@ export function AchievementsSection() {
                         : 'text-emerald-green'
                     }`} />
                   </div>
-                  <h3 className="text-lg font-semibold text-dark-charcoal mb-2">
+                  <h3 className="text-lg font-semibold text-dark-gray-text mb-2">
                     {achievement.title}
                   </h3>
                   <p className={`font-medium mb-2 ${
@@ -118,7 +118,7 @@ export function AchievementsSection() {
                   }`}>
                     {achievement.organization}
                   </p>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-dark-gray-text text-sm">
                     {achievement.description}
                   </p>
                 </CardContent>
