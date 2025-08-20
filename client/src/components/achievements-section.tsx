@@ -70,15 +70,15 @@ export function AchievementsSection() {
   return (
     <section 
       id="achievements" 
-      className="py-20 bg-card-darker"
+      className="py-20 bg-white-card"
       data-testid="achievements-section"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-deep-navy mb-4" data-testid="achievements-title">
+          <h2 className="text-4xl font-bold text-navy-blue mb-4" data-testid="achievements-title">
             Achievements & Recognition
           </h2>
-          <p className="text-xl text-light-gray-text">
+          <p className="text-xl text-dark-charcoal">
             Highlights of academic and professional accomplishments
           </p>
         </div>

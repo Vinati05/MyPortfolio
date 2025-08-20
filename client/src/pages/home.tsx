@@ -13,7 +13,7 @@ export default function Home() {
   const [isTerminalOpen, setIsTerminalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-soft-dark-gray text-light-gray-text font-inter">
+    <div className="min-h-screen bg-light-offwhite text-dark-charcoal font-inter">
       <Navigation onTerminalToggle={() => setIsTerminalOpen(true)} />
       <HeroSection />
       <AboutSection />

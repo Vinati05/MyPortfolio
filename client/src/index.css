@@ -4,31 +4,31 @@
 @tailwind utilities;
 
 :root {
-  --background: #333333;
-  --foreground: #e0e0e0;
-  --card: #404040;
-  --card-foreground: #e0e0e0;
-  --popover: #404040;
-  --popover-foreground: #e0e0e0;
+  --background: #f5f5f5;
+  --foreground: #222222;
+  --card: #ffffff;
+  --card-foreground: #222222;
+  --popover: #ffffff;
+  --popover-foreground: #222222;
   --primary: #1e3a8a;
-  --primary-foreground: #e0e0e0;
-  --secondary: #444444;
-  --secondary-foreground: #e0e0e0;
-  --muted: #555555;
-  --muted-foreground: #b0b0b0;
-  --accent: #1abc9c;
-  --accent-foreground: #333333;
+  --primary-foreground: #ffffff;
+  --secondary: #f0f0f0;
+  --secondary-foreground: #222222;
+  --muted: #f8f8f8;
+  --muted-foreground: #666666;
+  --accent: #20c997;
+  --accent-foreground: #ffffff;
   --destructive: hsl(0, 84%, 60%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --border: #666666;
-  --input: #444444;
+  --border: #dcdcdc;
+  --input: #ffffff;
   --ring: #1e3a8a;
-  --soft-dark-gray: #333333;
-  --light-gray-text: #e0e0e0;
-  --deep-navy: #1e3a8a;
-  --vibrant-teal: #1abc9c;
-  --muted-gold: #f5b041;
-  --card-darker: #404040;
+  --light-offwhite: #f5f5f5;
+  --dark-charcoal: #222222;
+  --navy-blue: #1e3a8a;
+  --teal-accent: #20c997;
+  --light-gray-border: #dcdcdc;
+  --white-card: #ffffff;
   --font-sans: 'Inter', sans-serif;
   --radius: 0.5rem;
 }
@@ -61,66 +61,58 @@
   }
   
   body {
-    @apply bg-soft-dark-gray text-light-gray-text font-sans antialiased;
+    @apply bg-light-offwhite text-dark-charcoal font-sans antialiased;
     font-family: 'Inter', sans-serif;
   }
 }
 
 @layer utilities {
-  .soft-dark-gray {
-    background-color: var(--soft-dark-gray);
+  .light-offwhite {
+    background-color: var(--light-offwhite);
   }
   
-  .card-darker {
-    background-color: var(--card-darker);
+  .white-card {
+    background-color: var(--white-card);
   }
   
-  .deep-navy {
-    background-color: var(--deep-navy);
+  .navy-blue {
+    background-color: var(--navy-blue);
   }
   
-  .vibrant-teal {
-    background-color: var(--vibrant-teal);
+  .teal-accent {
+    background-color: var(--teal-accent);
   }
   
-  .muted-gold {
-    background-color: var(--muted-gold);
+  .text-dark-charcoal {
+    color: var(--dark-charcoal);
   }
   
-  .text-light-gray-text {
-    color: var(--light-gray-text);
+  .text-navy-blue {
+    color: var(--navy-blue);
   }
   
-  .text-deep-navy {
-    color: var(--deep-navy);
+  .text-teal-accent {
+    color: var(--teal-accent);
   }
   
-  .text-vibrant-teal {
-    color: var(--vibrant-teal);
+  .bg-light-offwhite {
+    background-color: var(--light-offwhite);
   }
   
-  .text-muted-gold {
-    color: var(--muted-gold);
+  .bg-white-card {
+    background-color: var(--white-card);
   }
   
-  .bg-soft-dark-gray {
-    background-color: var(--soft-dark-gray);
+  .border-navy-blue {
+    border-color: var(--navy-blue);
   }
   
-  .bg-card-darker {
-    background-color: var(--card-darker);
+  .border-teal-accent {
+    border-color: var(--teal-accent);
   }
   
-  .border-deep-navy {
-    border-color: var(--deep-navy);
-  }
-  
-  .border-vibrant-teal {
-    border-color: var(--vibrant-teal);
-  }
-  
-  .border-muted-gold {
-    border-color: var(--muted-gold);
+  .border-light-gray {
+    border-color: var(--light-gray-border);
   }
 }
 
