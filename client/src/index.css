@@ -1,3 +1,43 @@
+@keyframes modal-fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.97) translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+.animate-modal-fade-in {
+  animation: modal-fade-in 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* Footer icon and text shadow for visibility */
+.footer-shadow {
+  text-shadow: 0 1px 6px #fff, 0 0px 2px #fff;
+}
+.footer-icon-shadow {
+  filter: drop-shadow(0 1px 4px #fff);
+}
+/* Experience section details dark grey, but not the main heading or subheading */
+#experience .experience-details, #experience .experience-details * {
+  color: #333333 !important;
+}
+/* Force dark grey text for all text in Featured Projects section and modal */
+#projects, .project-card, .project-card *, .modal-content, .modal-content * {
+  color: #333333 !important;
+}
+
+.terminal-text {
+  overflow: hidden;
+  border-right: .15em solid var(--royal-blue);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
@@ -174,13 +214,38 @@
   animation: glow 2s ease-in-out infinite alternate;
 }
 
-.terminal-text {
+
+
+.marquee-text {
+  width: 100%;
   overflow: hidden;
-  border-right: .15em solid var(--royal-blue);
   white-space: nowrap;
+  position: relative;
   margin: 0 auto;
-  letter-spacing: .15em;
-  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 2em;
+}
+.marquee-text span {
+  display: inline-block;
+  min-width: max-content;
+  animation: marquee-scroll 18s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(0);
+  }
+  90% {
+    transform: translateX(calc(-100% + 100vw));
+  }
+  100% {
+    transform: translateX(calc(-100% + 100vw));
+  }
 }
 
 .floating-element {

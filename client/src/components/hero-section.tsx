@@ -1,26 +1,35 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Database, Brain } from 'lucide-react';
 import { SiPython, SiJavascript } from 'react-icons/si';
 
 export function HeroSection() {
   const [typedText, setTypedText] = useState('');
+  const [isTyped, setIsTyped] = useState(false);
   const fullText = "Passionate about technology, driven to learn, and focused on creating impact.";
+  const marqueeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let currentIndex = 0;
-    const typingSpeed = 100;
-    
+  const typingSpeed = 120;
+    let typingTimeout: NodeJS.Timeout;
+    let startTyping: NodeJS.Timeout;
+
     const typeText = () => {
       if (currentIndex < fullText.length) {
         setTypedText(fullText.slice(0, currentIndex + 1));
         currentIndex++;
-        setTimeout(typeText, typingSpeed);
+        typingTimeout = setTimeout(typeText, typingSpeed);
+      } else {
+        setIsTyped(true);
       }
     };
 
-    const startTyping = setTimeout(typeText, 1000);
-    return () => clearTimeout(startTyping);
+    startTyping = setTimeout(typeText, 1000);
+    return () => {
+      clearTimeout(startTyping);
+      clearTimeout(typingTimeout);
+    };
   }, []);
 
   const scrollToSection = (sectionId: string) => {
@@ -65,30 +74,58 @@ export function HeroSection() {
             Vinati Vege
           </h1>
           
-          <div className="text-xl md:text-2xl text-soft-cream-text max-w-4xl mx-auto min-h-[2em]">
+
+          <div className="text-base md:text-lg text-soft-cream-text max-w-4xl mx-auto min-h-[2em] flex justify-center items-center">
             <span 
-              className="terminal-text"
+              className="terminal-text text-center w-full"
+              style={{ display: 'inline-block' }}
               data-testid="hero-tagline"
             >
-              {typedText}
+              {isTyped ? fullText : typedText}
             </span>
           </div>
+
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               onClick={() => scrollToSection('projects')}
-              className="bg-coral-accent hover:bg-red-500 px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 text-crisp-white shadow-vibrant-lg"
+              variant="outline"
+              className="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all bg-transparent shadow-vibrant-lg"
               data-testid="button-explore-work"
             >
               Explore My Work
             </Button>
             <Button
-              onClick={() => window.open('https://github.com/vinativege', '_blank')}
+              onClick={() => window.open('https://github.com/Vinati05', '_blank')}
               variant="outline"
               className="border-2 border-electric-teal text-electric-teal hover:bg-electric-teal hover:text-crisp-white px-8 py-4 rounded-lg font-semibold transition-all bg-transparent shadow-vibrant-lg"
               data-testid="button-view-github"
             >
               View GitHub
+            </Button>
+            <Button
+              onClick={() => window.open('https://linkedin.com/in/vinati-vege', '_blank')}
+              variant="outline"
+              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all bg-transparent shadow-vibrant-lg"
+              data-testid="button-view-linkedin"
+            >
+              View LinkedIn
+            </Button>
+            <Button
+              onClick={() => window.open('mailto:vinativege@gmail.com', '_blank')}
+              variant="outline"
+              className="border-2 border-coral-accent text-coral-accent hover:bg-coral-accent hover:text-white px-8 py-4 rounded-lg font-semibold transition-all bg-transparent shadow-vibrant-lg"
+              data-testid="button-send-mail"
+            >
+              Mail
+            </Button>
+            <Button
+              onClick={() => window.open('https://wa.me/7075211905', '_blank')}
+              variant="outline"
+              className="border-2 border-green-600 text-green-700 hover:bg-green-600 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all bg-transparent shadow-vibrant-lg"
+              data-testid="button-whatsapp"
+            >
+              WhatsApp
             </Button>
           </div>
         </div>

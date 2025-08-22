@@ -63,11 +63,11 @@ export function ExperienceSection() {
                 <>
                   <div className="flex-1 pr-8 text-right">
                     <Card className="bg-white border border-gray-200 shadow-lg" data-testid={`experience-card-${exp.id}`}>
-                      <CardContent className="p-6">
+                      <CardContent className="p-6 experience-details">
                         <h3 className="text-xl font-semibold text-dark-gray-text mb-2">
                           {exp.title}
                         </h3>
-                        <h4 className={`font-medium mb-2 ${exp.type === 'work' ? 'text-royal-blue' : 'text-emerald-green'}`}>
+                        <h4 className="font-medium mb-2 text-dark-gray">
                           {exp.company}
                         </h4>
                         <p className="text-dark-gray-text mb-4">
@@ -123,11 +123,11 @@ export function ExperienceSection() {
                   </div>
                   <div className="flex-1 pl-8">
                     <Card className="bg-white border border-gray-200 shadow-lg" data-testid={`experience-card-${exp.id}`}>
-                      <CardContent className="p-6">
+                      <CardContent className="p-6 experience-details">
                         <h3 className="text-xl font-semibold text-dark-gray-text mb-2">
                           {exp.title}
                         </h3>
-                        <h4 className={`font-medium mb-2 ${exp.type === 'work' ? 'text-royal-blue' : 'text-emerald-green'}`}>
+                        <h4 className="font-medium mb-2 text-dark-gray">
                           {exp.company}
                         </h4>
                         <p className="text-dark-gray-text mb-4">

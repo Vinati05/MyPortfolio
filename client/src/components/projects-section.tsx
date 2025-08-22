@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Bot, Eye, ChevronsRight, ShoppingCart, Music, Plus, ArrowRight } from 'lucide-react';
-import { ProjectModal } from '@/components/project-modal';
+import ProjectModal from '@/components/project-modal';
 import type { Project } from '@/lib/types';
 
 export function ProjectsSection() {
@@ -160,7 +160,17 @@ export function ProjectsSection() {
                   </div>
                   
                   <p className="text-dark-gray-text mb-4">
-                    {project.description}
+                    {project.description.split(/(Python|NLP|TensorFlow|OpenCV|Deep Learning|Key Features|Natural language understanding|Context-aware responses|Multi-platform integration|Real-time learning|Challenges|impact)/g).map((part, idx) => {
+                      const goldWords = [
+                        'Python', 'NLP', 'TensorFlow', 'OpenCV', 'Deep Learning', 'Key Features',
+                        'Natural language understanding', 'Context-aware responses',
+                        'Multi-platform integration', 'Real-time learning', 'Challenges', 'impact'
+                      ];
+                      if (goldWords.includes(part)) {
+                        return <span key={idx} className="text-dark-gray font-semibold">{part}</span>;
+                      }
+                      return part;
+                    })}
                   </p>
                   
                   <div className="flex flex-wrap gap-2 mb-4">

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static Modal Example</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0a0a23;
+    }
+    .modal-bg {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(2px);
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .modal-content {
+      background: #fff;
+      color: #222831;
+      border-radius: 1rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+      max-width: 40rem;
+      width: 100%;
+      margin: 2rem;
+      padding: 2rem;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      animation: fadeIn 0.3s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.97) translateY(40px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #666;
+      cursor: pointer;
+      z-index: 10;
+      transition: color 0.2s;
+    }
+    .modal-close:hover {
+      color: #222831;
+    }
+    .modal-header {
+      width: 100%;
+      height: 16rem;
+      background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+      border-radius: 1rem 1rem 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #e5e7eb;
+      margin: -2rem -2rem 2rem -2rem;
+      flex-direction: column;
+    }
+    .modal-header-emoji {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .modal-header-title {
+      font-size: 1rem;
+      opacity: 0.75;
+      color: #3b82f6;
+    }
+    .modal-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #222831;
+    }
+    .modal-description {
+      color: #222831;
+      margin-bottom: 1.5rem;
+    }
+    .modal-section-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #222831;
+      margin-bottom: 0.5rem;
+    }
+    .modal-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .modal-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 0.5rem;
+      border: 1px solid #222831;
+      font-weight: 600;
+      background: transparent;
+      color: #222831;
+      font-size: 1rem;
+    }
+    .modal-features {
+      margin-bottom: 1.5rem;
+    }
+    .modal-features ul {
+      padding-left: 1.25rem;
+      color: #222831;
+    }
+    .modal-features li {
+      margin-bottom: 0.25rem;
+    }
+    .modal-section {
+      margin-bottom: 1.5rem;
+    }
+    .modal-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .modal-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1.25rem;
+      border-radius: 0.5rem;
+      border: 1px solid #2563eb;
+      background: #fff;
+      color: #2563eb;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .modal-btn:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    @media (max-width: 640px) {
+      .modal-content {
+        padding: 1rem;
+        margin: 1rem;
+      }
+      .modal-header {
+        height: 8rem;
+        margin: -1rem -1rem 1rem -1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="modal-bg">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <div class="modal-header">
+        <div class="modal-header-emoji">💻</div>
+        <div class="modal-header-title">Age &amp; Gender Detection</div>
+      </div>
+      <div class="modal-title">Age &amp; Gender Detection</div>
+      <div class="modal-description">
+        A computer vision system that performs real-time age and gender detection using advanced deep learning models and OpenCV for image processing.
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Tech Stack</div>
+        <div class="modal-badges">
+          <span class="modal-badge">OpenCV</span>
+          <span class="modal-badge">Deep Learning</span>
+          <span class="modal-badge">Python</span>
+        </div>
+      </div>
+      <div class="modal-section modal-features">
+        <div class="modal-section-title">Key Features</div>
+        <ul>
+          <li>Real-time face detection</li>
+          <li>Age estimation with 85% accuracy</li>
+          <li>Gender classification</li>
+          <li>Batch processing capabilities</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Challenges</div>
+        <div>Achieving consistent accuracy across different lighting conditions and face angles.</div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Impact</div>
+        <div>Deployed in retail analytics to improve targeted marketing effectiveness.</div>
+      </div>
+      <div class="modal-buttons">
+        <a href="#" class="modal-btn" target="_blank">Live Demo</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
